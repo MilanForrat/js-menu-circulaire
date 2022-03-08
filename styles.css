@@ -112,13 +112,16 @@ h1 + p{
 }
 .links-circle:nth-child(1){
     left: -15%;
+    transition: transform 0.2s ease 0.4s;
 }
 .links-circle:nth-child(2){
     left: 1%;
     top: 95%;
+    transition: transform 0.2s ease 0.2s;
 }
 .links-circle:nth-child(3){
     top: 115%;
+    transition: transform 0.2s ease;
 }
 /* quand circle menu aura la class circle anim alors le premier élément qui a la class links-circle */
 .circle-menu.circle-anim .links-circle:nth-child(1){
