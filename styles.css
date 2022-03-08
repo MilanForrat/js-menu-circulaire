@@ -75,11 +75,11 @@ h1 + p{
     transform 0.2s ease 0.2s;
 }
 .circle-menu{
-    background: rgb(17, 17, 17);
-    width: 500px;
-    height: 500px;
+    background: rgb(245, 225, 225);
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
-    border: 90px solid rgb(189, 39, 39);
+    border: 65px solid rgb(189, 39, 39);
     position: absolute;
     z-index: 5;
     top: 50%;
@@ -90,4 +90,47 @@ h1 + p{
 .circle-menu.circle-anim{
     transition: transform 0.4 ease 0.4s;
     transform: translate(-50%, -50%) scale(1);
+}
+.links-circle{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links-circle img{
+    width: 40px;
+    transition: transform 0.2s ease;
+}
+.links-circle img:hover{
+    transform: scale(1.2);
+}
+.links-circle:nth-child(1){
+    left: -15%;
+}
+.links-circle:nth-child(2){
+    left: 1%;
+    top: 95%;
+}
+.links-circle:nth-child(3){
+    top: 115%;
+}
+/* quand circle menu aura la class circle anim alors le premier élément qui a la class links-circle */
+.circle-menu.circle-anim .links-circle:nth-child(1){
+    transform: translate(-50%, -50%) scale(1);
+    /* gestion des délais pour faire apparaître les icônes en dernier */
+    transition: transform 0.2s ease 0.7s;
+}
+.circle-menu.circle-anim .links-circle:nth-child(2){
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.2s ease 0.9s;
+}
+.circle-menu.circle-anim .links-circle:nth-child(3){
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.2s ease 1.1s;
 }
