@@ -6,3 +6,53 @@ body{
     background-color: #333;
     height: 100vh;
 }
+h1{
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 200px;
+    padding-top: 125px;
+}
+h1 + p{
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 35px;
+    position: relative;
+    top: -35px;
+}
+.container-corner{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+.btn-circle{
+    background: darkblue;
+    display: block;
+    z-index: 15;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #f1f1f1;
+}
+.line{
+    width: 50%;
+    height: 3px;
+    background: #f1f1f1;
+    transition: 
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    top 0.2s ease;
+    position: relative;
+}
+.line:nth-child(1){
+    top: -10px;
+}
+.line:nth-child(3){
+    top: 10px;
+}
